@@ -1,6 +1,8 @@
 import Link from "next/link";
 import "./globals.scss";
 import { Inter } from "next/font/google";
+import ThemeProvider from "@/context/ThemeContext";
+import ToggleThemeButton from "@/components/ToggleThemeButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,25 +18,30 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <nav>
-          <ul
-            style={{
-              display: "flex",
-              justifyContent: "space-evenly",
-              margin: "2rem 0",
-              borderWidth: "3px",
-              padding: "1rem 0",
-            }}
-          >
-            <Link href={"/"}>Home</Link>
-            <Link href={"/about"}>About</Link>
-            <Link href={"/tienda"}>Tienda</Link>
-            <Link href={"/posts"}>Posts</Link>
-          </ul>
-        </nav>
-        {children}
-      </body>
+      <ThemeProvider>
+        <body className={inter.className}>
+          <header>
+            <ToggleThemeButton />
+          </header>
+          <nav>
+            <ul
+              style={{
+                display: "flex",
+                justifyContent: "space-evenly",
+                margin: "1rem 0",
+                border: "1px solid",
+                padding: "1rem 0",
+              }}
+            >
+              <Link href={"/"}>Home</Link>
+              <Link href={"/about"}>About</Link>
+              <Link href={"/tienda"}>Tienda</Link>
+              <Link href={"/posts"}>Posts</Link>
+            </ul>
+          </nav>
+          {children}
+        </body>
+      </ThemeProvider>
     </html>
   );
 }
