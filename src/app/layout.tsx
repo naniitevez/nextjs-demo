@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "./globals.scss";
+import "./reset.scss";
 import { Inter } from "next/font/google";
 import ThemeProvider from "@/context/ThemeContext";
 import ToggleThemeButton from "@/components/ToggleThemeButton";

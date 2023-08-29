@@ -1,0 +1,11 @@
+@mixin text-styling {
+  font-size: 16px;
+  color: red;
+  text-align: center;
+}
+
+@mixin responsive($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}

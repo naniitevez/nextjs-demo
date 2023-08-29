@@ -1,0 +1,25 @@
+@import '../../styles/index.scss';
+
+h1.about {
+    @include text-styling;
+}
+
+.prueba {
+    background-color: blue;
+    height: 50px;
+    width: calculate-width(100px);
+
+    @include responsive(1200px) {
+        background-color: yellow;
+    }
+
+    @include responsive(768px) {
+        background-color: green;
+    }
+}
+
+.prueba-div {
+    height: 50px;
+    width: calculate-width(100px);
+    background: $primary-color;
+}

@@ -1,0 +1,12 @@
+@import '../styles/index.scss';
+
+h1 {
+    color: blueviolet;
+}
+
+.prueba-div-2 {
+    width: 300px;
+    height: 200px;
+    background-color: darkseagreen;
+    @include text-styling;
+}

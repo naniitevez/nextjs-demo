@@ -1,0 +1,39 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+html {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  line-height: 1.4rem;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+p a {
+  display: inline;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
